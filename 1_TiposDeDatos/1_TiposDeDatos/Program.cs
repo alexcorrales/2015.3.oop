@@ -8,7 +8,7 @@ namespace _1_TiposDeDatos
 {
     class Program
     {
-        enum Dias {Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado};
+        enum Dias {Domingo=1, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado};
 
         static void Main(string[] args)
         {
@@ -33,11 +33,26 @@ namespace _1_TiposDeDatos
             // Tipos objeto: 
             
             // Fecha
-            DateTime fecha = new DateTime(2015, 1, 1);
+            DateTime fecha = DateTime.Now;//new DateTime(2015, 10, 5, 7, 16, 45);
+            //fecha = fecha.AddYears(-1);
             Console.WriteLine(fecha);          
 
             // Uso de un enum
-            Console.WriteLine(Dias.Domingo);           
+            Console.WriteLine(Dias.Domingo);   
+            Dias dia = Dias.Jueves;
+            if (dia == Dias.Domingo)
+            {
+                Console.WriteLine("Es domingo");
+            }
+            else
+            {
+                Console.WriteLine("No es domingo");
+            }
+
+            var unaVariable = "Hola";
+            unaVariable.
+
+            Console.WriteLine(unaVariable);
 
             Console.ReadKey(true);
         }
