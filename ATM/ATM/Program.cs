@@ -10,9 +10,9 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            Login login = new Login("12129u12", DateTime.Now);
+            Transaccion trx = new Login("12129u12", DateTime.Now);
 
-            Console.WriteLine(login);
+            Console.WriteLine(trx);
 
             Console.ReadKey(true);
         }
