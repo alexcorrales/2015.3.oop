@@ -16,8 +16,9 @@ namespace ATM
          * 
          */
         public Login(string identificador, DateTime fecha)
-            : base(identificador, fecha)
         {
+            base.identificador = identificador;
+            base.fecha = fecha;
         }
 
         /**
@@ -35,6 +36,11 @@ namespace ATM
             sb.Append("\nEsto es un login");
 
             return sb.ToString();
+        }
+
+        public override void Comisionar()
+        {
+            Console.WriteLine("Login: No se implementa");
         }
 
     }

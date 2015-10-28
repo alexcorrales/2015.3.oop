@@ -8,18 +8,11 @@ namespace ATM{
     /**
      * 
      */
-    public class Transaccion {
+    public abstract class Transaccion {
 
         /**
          * 
          */
-        public Transaccion(string identificador, DateTime fecha) {
-                this.identificador = identificador;
-                this.fecha = fecha;
-                //this.atm = atm;
-                //this.sesion = sesion;
-        }
-
         protected string identificador;
 
         protected DateTime fecha;
@@ -29,6 +22,8 @@ namespace ATM{
         //private ATM atm;
 
         //private Sesion sesion;
+
+
 
         public override string ToString()
         {
@@ -40,7 +35,9 @@ namespace ATM{
 
             return sb.ToString();
         }
-       
+
+
+        public abstract void Comisionar();
 
     }
 }
