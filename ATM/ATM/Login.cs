@@ -28,7 +28,7 @@ namespace ATM
             // TODO implement here
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.ToString());
