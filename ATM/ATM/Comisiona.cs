@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace ATM
 {
-    class Program
+    class Comisiona : IComisionable
     {
-        static void Main(string[] args)
+        public void Comisionar()
         {
-            Transaccion trx = new Login("232324", DateTime.Now);
-
-            Console.ReadKey(true);
+            Console.WriteLine("Comisiona");
         }
     }
 }

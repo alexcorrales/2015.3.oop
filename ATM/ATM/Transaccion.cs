@@ -23,6 +23,17 @@ namespace ATM{
 
         //private Sesion sesion;
 
+        private IComisionable comisionComportamiento;
+
+        public void RealizarComision()
+        {
+            comisionComportamiento.Comisionar();
+        }
+
+        public void ModificarComportamientoComision(IComisionable comportamiento)
+        {
+            comisionComportamiento = comportamiento;
+        }
 
 
         public override string ToString()
@@ -35,9 +46,6 @@ namespace ATM{
 
             return sb.ToString();
         }
-
-
-        public abstract void Comisionar();
 
     }
 }

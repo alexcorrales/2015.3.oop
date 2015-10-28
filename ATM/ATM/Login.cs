@@ -19,6 +19,11 @@ namespace ATM
         {
             base.identificador = identificador;
             base.fecha = fecha;
+            
+            base.ModificarComportamientoComision(new Comisiona());
+            base.RealizarComision();
+            base.ModificarComportamientoComision(new NoComisiona());
+            base.RealizarComision();
         }
 
         /**
@@ -38,10 +43,6 @@ namespace ATM
             return sb.ToString();
         }
 
-        public override void Comisionar()
-        {
-            Console.WriteLine("Login: No se implementa");
-        }
 
     }
 }

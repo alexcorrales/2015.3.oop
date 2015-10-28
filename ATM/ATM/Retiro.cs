@@ -31,10 +31,5 @@ namespace ATM{
             // TODO implement here
         }
 
-        public override void Comisionar()
-        {
-            Console.WriteLine("Retiro: Transaccion si comisiona");
-        }
-
     }
 }

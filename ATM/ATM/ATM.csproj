@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comisiona.cs" />
+    <Compile Include="IComisionable.cs" />
     <Compile Include="Login.cs" />
+    <Compile Include="NoComisiona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retiro.cs" />
