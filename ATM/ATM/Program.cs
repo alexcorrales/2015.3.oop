@@ -10,7 +10,7 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            Transaccion trx = new Login("232324", DateTime.Now);
+            Transaccion trx = new Retiro("232324", DateTime.Now, 500M);
 
             Console.ReadKey(true);
         }

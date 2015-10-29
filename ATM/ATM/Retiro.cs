@@ -17,6 +17,8 @@ namespace ATM{
             this.identificador = identificador;
             this.fecha = fecha;
             this.monto = monto;
+            this.ModificarComportamientoComision(new Comisiona());
+            this.RealizarComision();
         }
 
         /**
