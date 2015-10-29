@@ -41,13 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATM.cs" />
+    <Compile Include="Caja.cs" />
     <Compile Include="Comisiona.cs" />
+    <Compile Include="Conector.cs" />
+    <Compile Include="Dinero.cs" />
     <Compile Include="IComisionable.cs" />
+    <Compile Include="Impresora.cs" />
+    <Compile Include="LectoraTarjeta.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="NoComisiona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Retiro.cs" />
+    <Compile Include="Sesion.cs" />
+    <Compile Include="Tarjeta.cs" />
     <Compile Include="Transaccion.cs" />
   </ItemGroup>
   <ItemGroup>

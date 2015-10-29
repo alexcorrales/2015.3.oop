@@ -21,20 +21,28 @@ namespace ATM{
          */
         private bool tarjetaIngresada;
 
+        public bool TarjetaIngresada
+        {
+          get { return tarjetaIngresada; }
+          set { tarjetaIngresada = value; }
+        }
+
 
         /**
          * @param Tarjeta t 
          * @param int Pin
          */
-        public void LeerTarjeta(void Tarjeta t, void int Pin) {
-            // TODO implement here
+        public void LeerTarjeta(Externo.Tarjeta t, int Pin) {
+            this.TarjetaIngresada = true;
+
+            // TODO: Enviar a Sesion los valores de tarjeta y pin
         }
 
         /**
          * 
          */
         public void RetirarTarjeta() {
-            // TODO implement here
+            this.TarjetaIngresada = false;
         }
 
     }

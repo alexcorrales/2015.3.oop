@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Externo;
 
 namespace ATM{
     /**
@@ -10,26 +11,48 @@ namespace ATM{
      */
     public class Sesion {
 
+        public enum EEstadoSesion { INICIADO, TERMINADO }
+
         /**
          * 
          */
-        public Sesion() {
+        public Sesion(Tarjeta tarjeta, int pin) {
+            this.tarjeta = tarjeta;
+            this.pin = pin;
         }
 
         /**
          * 
          */
-        private int estadoActual;
+        private EEstadoSesion estadoActual;
+
+        public EEstadoSesion EstadoActual
+        {
+            get { return estadoActual; }
+            set { estadoActual = value; }
+        }
 
         /**
          * 
          */
         private Tarjeta tarjeta;
 
+        public Tarjeta Tarjeta
+        {
+            get { return tarjeta; }
+            set { tarjeta = value; }
+        }
+
         /**
          * 
          */
         private int pin;
+
+        public int Pin
+        {
+            get { return pin; }
+            set { pin = value; }
+        }
 
 
         /**
