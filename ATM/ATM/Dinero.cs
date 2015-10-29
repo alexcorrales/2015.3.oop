@@ -13,10 +13,12 @@ namespace ATM {
 
         public enum ETipoMoneda { LEMPIRAS, DOLARES };
 
+        public enum EDenominacion { CIEN, QUINIENTOS };
+
         /**
          * 
          */
-        public Dinero(ETipoMoneda tipoMoneda, decimal denominacion, int cantidad) {
+        public Dinero(ETipoMoneda tipoMoneda, EDenominacion denominacion, int cantidad) {
             this.tipoMoneda = tipoMoneda;
             this.denominacion = denominacion;
             this.cantidad = cantidad;
@@ -36,9 +38,9 @@ namespace ATM {
         /**
          * 
          */
-        private decimal denominacion;
+        private EDenominacion denominacion;
 
-        public decimal Denominacion
+        public EDenominacion Denominacion
         {
             get { return denominacion; }
             set { denominacion = value; }
@@ -61,7 +63,14 @@ namespace ATM {
 
         public bool Existencia() {
             // TODO implement here
-            return false;
+            if (cantidad > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /**
@@ -69,7 +78,15 @@ namespace ATM {
          */
         public decimal Monto() {
             // TODO implement here
-            return 0.0M;
+            switch (this.denominacion)
+            {
+                case EDenominacion.CIEN:
+                    return 100M * this.cantidad;
+                case EDenominacion.QUINIENTOS:
+                    return 500M * this.cantidad;
+                default: 
+                    return 0M;
+            }
         }
 
     }

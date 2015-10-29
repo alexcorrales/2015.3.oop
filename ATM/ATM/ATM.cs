@@ -13,7 +13,7 @@ namespace ATM{
         /**
          * 
          */
-        public ATM(string nombre, string direccion) {
+        public ATM(string nombre, string direccion, Caja caja) {
             this.nombre = nombre;
             this.direccion = direccion;
 

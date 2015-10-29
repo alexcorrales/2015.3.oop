@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.Generic;
 
 namespace ATM{
     /**
@@ -14,29 +15,24 @@ namespace ATM{
          * 
          */
         public Caja() {
+            billetes = new List<Dinero>();
         }
 
         /**
          * 
          */
-        private Dinero billetes;
+        private List<Dinero> billetes;
 
         /**
          * 
          */
         private decimal saldoActual;
 
-public decimal SaldoActual
-{
-  get { return saldoActual; }
-  set { saldoActual = value; }
-}
-
-        /**
-         * 
-         */
-        private bool billeteSacado;
-
+        public decimal SaldoActual
+        {
+          get { return saldoActual; }
+          set { saldoActual = value; }
+        }
 
 
         /**
@@ -49,14 +45,14 @@ public decimal SaldoActual
         /**
          * @param Billete b
          */
-        public void Agregar(void Billete b) {
-            // TODO implement here
+        public void Agregar(Dinero b) {
+            billetes.Add(b);
         }
 
         /**
          * @param decimal monto
          */
-        public void Quitar(void decimal monto) {
+        public void Quitar(decimal monto) {
             // TODO implement here
         }
 
