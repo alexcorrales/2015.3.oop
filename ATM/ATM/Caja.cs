@@ -26,6 +26,12 @@ namespace ATM{
          */
         private decimal saldoActual;
 
+public decimal SaldoActual
+{
+  get { return saldoActual; }
+  set { saldoActual = value; }
+}
+
         /**
          * 
          */

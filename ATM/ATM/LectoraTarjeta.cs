@@ -21,6 +21,13 @@ namespace ATM{
          */
         private bool tarjetaIngresada;
 
+        public bool TarjetaIngresada1
+        {
+            get { return tarjetaIngresada; }
+            set { tarjetaIngresada = value; }
+        }
+
+    
         public bool TarjetaIngresada
         {
           get { return tarjetaIngresada; }
