@@ -4,35 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ATM
-{
+namespace ATM{
     /**
      * 
      */
-    public class Login : Transaccion
-    {
+    public class CambioPIN : Transaccion {
 
         /**
          * 
          */
-        public Login(DateTime fecha, ATM atm, Sesion sesion)
-        {
-            base.Fecha = fecha;
+        public CambioPIN(ATM atm, Sesion sesion, string nuevoPIN) {
+            base.Fecha = DateTime.Now;
             base.Atm = atm;
             base.Sesion = sesion;
 
             base.getSecuencia();
-            
-            // Definimos un comportamiento menos dinamico pero correcto
+            this.nuevoPIN = nuevoPIN;
+
             base.Comision = 0M;
             base.EsImprimible = false;
         }
 
+        private string nuevoPIN;
+
         /**
          * 
          */
-        public override void Proceder()
-        {
+        public override void Proceder() {
             // TODO implement here
         }
 

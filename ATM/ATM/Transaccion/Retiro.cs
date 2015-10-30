@@ -8,22 +8,29 @@ namespace ATM{
     /**
      * 
      */
-    public class ConsultaSaldo : Transaccion {
+    public class Retiro : Transaccion {
 
         /**
          * 
          */
-        public ConsultaSaldo(DateTime fecha, ATM atm, Sesion sesion)
+        public Retiro(ATM atm, Sesion sesion, decimal monto)
         {
-            base.Fecha = fecha;
+            base.Fecha = DateTime.Now;
             base.Atm = atm;
             base.Sesion = sesion;
 
             base.getSecuencia();
 
+            this.monto = monto;
+
             base.Comision = 15M;
             base.EsImprimible = true;
         }
+
+        /**
+         * 
+         */
+        private decimal monto;
 
         /**
          * 

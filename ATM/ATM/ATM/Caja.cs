@@ -38,7 +38,7 @@ namespace ATM{
          * 
          */
         public void Arqueo() {
-            // TODO implement here
+            // TODO implementacion futura, una vez resuelto Retiro
         }
 
         /**
@@ -52,7 +52,8 @@ namespace ATM{
          * @param decimal monto
          */
         public void Quitar(decimal monto) {
-            // TODO implement here
+            // TODO tarea: El monto del parametro se debe descomponer y sustraer de los billetes
+            // disponibles
         }
 
     }

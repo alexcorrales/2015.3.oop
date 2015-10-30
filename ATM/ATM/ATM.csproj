@@ -41,32 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ATM.cs" />
-    <Compile Include="Caja.cs" />
-    <Compile Include="CambioPIN.cs" />
-    <Compile Include="Conector.cs" />
-    <Compile Include="ConsultaSaldo.cs" />
-    <Compile Include="Deposito.cs" />
-    <Compile Include="Dinero.cs" />
-    <Compile Include="Impresora.cs" />
-    <Compile Include="LectoraTarjeta.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="ATM\ATM.cs" />
+    <Compile Include="ATM\Caja.cs" />
+    <Compile Include="Transaccion\CambioPIN.cs" />
+    <Compile Include="ATM\Conector.cs" />
+    <Compile Include="Transaccion\ConsultaSaldo.cs" />
+    <Compile Include="Transaccion\Deposito.cs" />
+    <Compile Include="ATM\Dinero.cs" />
+    <Compile Include="ATM\Impresora.cs" />
+    <Compile Include="ATM\LectoraTarjeta.cs" />
+    <Compile Include="Transaccion\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recibo.cs" />
-    <Compile Include="Retiro.cs" />
-    <Compile Include="Sesion.cs" />
-    <Compile Include="Tarjeta.cs" />
-    <Compile Include="Transaccion.cs" />
+    <Compile Include="ATM\Recibo.cs" />
+    <Compile Include="Transaccion\Retiro.cs" />
+    <Compile Include="ATM\Sesion.cs" />
+    <Compile Include="Externo\Tarjeta.cs" />
+    <Compile Include="Transaccion\Transaccion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ATM\" />
-    <Folder Include="Externo\" />
-    <Folder Include="Transaccion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,9 +13,9 @@ namespace ATM{
         /**
          * 
          */
-        public Deposito(DateTime fecha, ATM atm, Sesion sesion, decimal monto)
+        public Deposito(ATM atm, Sesion sesion, decimal monto)
         {
-            base.Fecha = fecha;
+            base.Fecha = DateTime.Now;
             base.Atm = atm;
             base.Sesion = sesion;
 

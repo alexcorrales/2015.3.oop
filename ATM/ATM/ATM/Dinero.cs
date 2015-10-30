@@ -89,7 +89,8 @@ namespace ATM {
 
         public bool Quitar(ETipoMoneda tipoMoneda, EDenominacion denominacion, int cantidad)
         {
-            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion && this.cantidad >= cantidad)
+            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion 
+                && this.cantidad >= cantidad)
             {
                 this.cantidad -= cantidad;
                 return true;
@@ -100,7 +101,7 @@ namespace ATM {
 
         public bool Agregar(ETipoMoneda tipoMoneda, EDenominacion denominacion, int cantidad)
         {
-            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion && this.cantidad >= cantidad)
+            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion)
             {
                 this.cantidad += cantidad;
                 return true;

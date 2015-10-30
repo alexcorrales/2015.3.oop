@@ -31,7 +31,7 @@ namespace ATM{
         public DateTime Fecha
         {
             get { return fecha; }
-            set { fecha = value; }
+            protected set { fecha = value; }
         }
 
         private ATM atm;
