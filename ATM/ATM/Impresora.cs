@@ -20,7 +20,7 @@ namespace ATM{
         /**
          * @param Recibo r
          */
-        public void Imprimir(void Recibo r) {
+        public void Imprimir(Recibo r) {
             // TODO implement here
         }
 

@@ -62,7 +62,6 @@ namespace ATM {
          */
 
         public bool Existencia() {
-            // TODO implement here
             if (cantidad > 0)
             {
                 return true;
@@ -77,7 +76,6 @@ namespace ATM {
          * @return
          */
         public decimal Monto() {
-            // TODO implement here
             switch (this.denominacion)
             {
                 case EDenominacion.CIEN:
@@ -87,6 +85,28 @@ namespace ATM {
                 default: 
                     return 0M;
             }
+        }
+
+        public bool Quitar(ETipoMoneda tipoMoneda, EDenominacion denominacion, int cantidad)
+        {
+            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion && this.cantidad >= cantidad)
+            {
+                this.cantidad -= cantidad;
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool Agregar(ETipoMoneda tipoMoneda, EDenominacion denominacion, int cantidad)
+        {
+            if (this.tipoMoneda == tipoMoneda && this.denominacion == denominacion && this.cantidad >= cantidad)
+            {
+                this.cantidad += cantidad;
+                return true;
+            }
+
+            return false;
         }
 
     }

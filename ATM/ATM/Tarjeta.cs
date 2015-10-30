@@ -35,7 +35,7 @@ namespace Externo {
         private string propietario;
 
 
-        public string ToString()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(this.bancoEmisor);
@@ -47,5 +47,17 @@ namespace Externo {
             return sb.ToString();
         }
 
+        public string ToStringSecreto()
+        {
+            int posicion;
+            string cadena;
+
+            cadena = this.numeroTarjeta;
+            cadena = cadena.Replace(" ", "-");
+
+            posicion = cadena.LastIndexOf('-');
+
+            return "****-" + this.numeroTarjeta.Substring(posicion + 1, 4);
+        }
     }
 }

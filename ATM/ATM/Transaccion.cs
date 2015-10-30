@@ -10,42 +10,62 @@ namespace ATM{
      */
     public abstract class Transaccion {
 
-        /**
-         * 
-         */
-        protected string identificador;
+        // Static: Atributo de la clase y no el objeto.
+        private static int secuencia;
 
-        protected DateTime fecha;
-
-        protected int numeroProtegido;
-
-        //private ATM atm;
-
-        //private Sesion sesion;
-
-        private IComisionable comisionComportamiento;
-
-        public void RealizarComision()
+        public void getSecuencia()
         {
-            comisionComportamiento.Comisionar();
+            this.identificador = this.fecha.ToString("yyyyMMdd") + (++secuencia).ToString();
         }
 
-        public void ModificarComportamientoComision(IComisionable comportamiento)
+        private string identificador;
+
+        public string Identificador
         {
-            comisionComportamiento = comportamiento;
+            get { return identificador; }
+            private set { identificador = value; }  // dejarlo de solo lectura
         }
 
+        private DateTime fecha;
 
-        public override string ToString()
+        public DateTime Fecha
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("\nIdentificador: ");
-            sb.Append(this.identificador);
-            sb.Append("\nFecha: ");
-            sb.Append(this.fecha.ToShortDateString());
-
-            return sb.ToString();
+            get { return fecha; }
+            set { fecha = value; }
         }
 
+        private ATM atm;
+
+        public ATM Atm
+        {
+            get { return atm; }
+            set { atm = value; }
+        }
+
+        private Sesion sesion;
+
+        public Sesion Sesion
+        {
+            get { return sesion; }
+            set { sesion = value; }
+        }
+
+        private decimal comision;
+
+        public decimal Comision
+        {
+            get { return comision; }
+            set { comision = value; }
+        }
+
+        private bool esImprimible;
+
+        public bool EsImprimible
+        {
+            get { return esImprimible; }
+            set { esImprimible = value; }
+        }
+
+        public abstract void Proceder();
     }
 }

@@ -13,12 +13,18 @@ namespace ATM{
         /**
          * 
          */
-        public Retiro(string identificador, DateTime fecha, decimal monto) {
-            this.identificador = identificador;
-            this.fecha = fecha;
+        public Retiro(DateTime fecha, ATM atm, Sesion sesion, decimal monto)
+        {
+            base.Fecha = fecha;
+            base.Atm = atm;
+            base.Sesion = sesion;
+
+            base.getSecuencia();
+
             this.monto = monto;
-            this.ModificarComportamientoComision(new Comisiona());
-            this.RealizarComision();
+
+            base.Comision = 15M;
+            base.EsImprimible = true;
         }
 
         /**
@@ -29,7 +35,7 @@ namespace ATM{
         /**
          * 
          */
-        public void Proceder() {
+        public override void Proceder() {
             // TODO implement here
         }
 

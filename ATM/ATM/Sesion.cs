@@ -16,7 +16,7 @@ namespace ATM{
         /**
          * 
          */
-        public Sesion(Tarjeta tarjeta, int pin) {
+        public Sesion(Tarjeta tarjeta, string pin) {
             this.tarjeta = tarjeta;
             this.pin = pin;
         }
@@ -46,9 +46,9 @@ namespace ATM{
         /**
          * 
          */
-        private int pin;
+        private string pin;
 
-        public int Pin
+        public string Pin
         {
             get { return pin; }
             set { pin = value; }

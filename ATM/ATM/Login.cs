@@ -15,34 +15,26 @@ namespace ATM
         /**
          * 
          */
-        public Login(string identificador, DateTime fecha)
+        public Login(DateTime fecha, ATM atm, Sesion sesion)
         {
-            base.identificador = identificador;
-            base.fecha = fecha;
+            base.Fecha = fecha;
+            base.Atm = atm;
+            base.Sesion = sesion;
+
+            base.getSecuencia();
             
-            base.ModificarComportamientoComision(new Comisiona());
-            base.RealizarComision();
-            base.ModificarComportamientoComision(new NoComisiona());
-            base.RealizarComision();
+            // Definimos un comportamiento menos dinamico pero correcto
+            base.Comision = 0M;
+            base.EsImprimible = false;
         }
 
         /**
          * 
          */
-        public void Entrar()
+        public override void Proceder()
         {
             // TODO implement here
         }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(base.ToString());
-            sb.Append("\nEsto es un login");
-
-            return sb.ToString();
-        }
-
 
     }
 }

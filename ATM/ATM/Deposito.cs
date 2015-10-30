@@ -13,7 +13,18 @@ namespace ATM{
         /**
          * 
          */
-        public Deposito() {
+        public Deposito(DateTime fecha, ATM atm, Sesion sesion, decimal monto)
+        {
+            base.Fecha = fecha;
+            base.Atm = atm;
+            base.Sesion = sesion;
+
+            base.getSecuencia();
+
+            this.monto = monto;
+
+            base.Comision = 15M;
+            base.EsImprimible = true;
         }
 
         /**
@@ -24,7 +35,7 @@ namespace ATM{
         /**
          * 
          */
-        public void Proceder() {
+        public override void Proceder() {
             // TODO implement here
         }
 

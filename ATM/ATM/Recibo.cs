@@ -21,11 +21,35 @@ namespace ATM{
          */
         private DateTime fechaImpresion;
 
+        public DateTime FechaImpresion
+        {
+            get { return fechaImpresion; }
+            set { fechaImpresion = value; }
+        }
+
+        /**
+         * 
+         */
+        private List<string> detalles;
+
+        public List<string> Detalles
+        {
+            get { return detalles; }
+            set { detalles = value; }
+        }
+
+
         /**
          * @param Transaccion t
          */
-        public void GetDetalles(void Transaccion t) {
-            // TODO implement here
+        public List<string> GetDetalles(Transaccion t) {
+            List<string> detalles = new List<string>();
+
+            detalles.Add("Referencia: " + t.Identificador);
+            detalles.Add("Fecha: " + t.Fecha.ToShortDateString());
+            detalles.Add("");
+            detalles.Add("Tarjeta: " + t.Sesion.Tarjeta.ToStringSecreto());
+            return detalles;
         }
 
     }

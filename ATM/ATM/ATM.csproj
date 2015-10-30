@@ -44,16 +44,13 @@
     <Compile Include="ATM.cs" />
     <Compile Include="Caja.cs" />
     <Compile Include="CambioPIN.cs" />
-    <Compile Include="Comisiona.cs" />
     <Compile Include="Conector.cs" />
     <Compile Include="ConsultaSaldo.cs" />
     <Compile Include="Deposito.cs" />
     <Compile Include="Dinero.cs" />
-    <Compile Include="IComisionable.cs" />
     <Compile Include="Impresora.cs" />
     <Compile Include="LectoraTarjeta.cs" />
     <Compile Include="Login.cs" />
-    <Compile Include="NoComisiona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recibo.cs" />
@@ -64,6 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ATM\" />
+    <Folder Include="Externo\" />
+    <Folder Include="Transaccion\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

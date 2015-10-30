@@ -10,6 +10,7 @@ namespace ATM{
      */
     public class Conector {
 
+        public enum ETipoRespuesta { OK }
         /**
          * 
          */
@@ -19,14 +20,20 @@ namespace ATM{
         /**
          * 
          */
-        private int respuesta;
+        private ETipoRespuesta respuesta;
+
+        public ETipoRespuesta Respuesta
+        {
+            get { return respuesta; }
+            set { respuesta = value; }
+        }
 
 
 
         /**
          * @param Transaccion t
          */
-        public void enviarTransaccion(void Transaccion t) {
+        public void enviarTransaccion(Transaccion t) {
             // TODO implement here
         }
 

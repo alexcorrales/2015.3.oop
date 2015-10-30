@@ -13,13 +13,22 @@ namespace ATM{
         /**
          * 
          */
-        public ConsultaSaldo() {
+        public ConsultaSaldo(DateTime fecha, ATM atm, Sesion sesion)
+        {
+            base.Fecha = fecha;
+            base.Atm = atm;
+            base.Sesion = sesion;
+
+            base.getSecuencia();
+
+            base.Comision = 15M;
+            base.EsImprimible = true;
         }
 
         /**
          * 
          */
-        public void Proceder() {
+        public override void Proceder() {
             // TODO implement here
         }
 
