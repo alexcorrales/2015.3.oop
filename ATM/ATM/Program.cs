@@ -10,14 +10,20 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            Login lg = new Login(null, null);
+            Dinero c1 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.CIEN, 2);
+            Dinero c2 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.QUINIENTOS, 3);
+            Dinero c3 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.CIEN, 1);
 
-            Console.WriteLine(lg.Identificador);
+            Caja caja = new Caja();
+            caja.Agregar(c1);
+            caja.Agregar(c2);
+            caja.Agregar(c3);
 
-            Transaccion lg1 = new Retiro(null, null, 0M);
+            Console.WriteLine(caja);
 
-            Console.WriteLine(lg1.Identificador);
+            caja.Quitar(300);
 
+            Console.WriteLine(caja);
 
             Console.ReadKey(true);
         }
