@@ -10,9 +10,12 @@ namespace ATM
     {
         static void Main(string[] args)
         {
-            Dinero c1 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.CIEN, 2);
-            Dinero c2 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.QUINIENTOS, 3);
-            Dinero c3 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, Dinero.EDenominacion.CIEN, 1);
+            Dinero c1 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, 
+                Dinero.EDenominacion.CIEN, 2);
+            Dinero c2 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, 
+                Dinero.EDenominacion.QUINIENTOS, 3);
+            Dinero c3 = new Dinero(Dinero.ETipoMoneda.LEMPIRAS, 
+                Dinero.EDenominacion.CIEN, 1);
 
             Caja caja = new Caja();
             caja.Agregar(c1);
@@ -21,7 +24,8 @@ namespace ATM
 
             Console.WriteLine(caja);
 
-            caja.Quitar(300);
+            Console.WriteLine("Retiro de L 150.00");
+            caja.Quitar(150);
 
             Console.WriteLine(caja);
 

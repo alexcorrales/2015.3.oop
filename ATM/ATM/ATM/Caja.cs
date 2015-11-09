@@ -49,7 +49,7 @@ namespace ATM{
             // Primer opcion: Si el elemento a ingresar es igual a uno de la coleccion, se unifica
             for (int i = 0; i < this.billetes.Count; i++)
             {
-                if (billetes[i].TipoMoneda.Equals(b.TipoMoneda) && billetes[i].Denominacion.Equals(b.Denominacion))
+                if (Dinero.EsSimilar(billetes[i], b))
                 {
                     this.billetes[i] = this.billetes[i] + b;
                     return;

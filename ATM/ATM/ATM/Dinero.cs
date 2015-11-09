@@ -120,7 +120,7 @@ namespace ATM {
         public static Dinero operator + (Dinero a, Dinero b) {
             int cantidad;
 
-            if (a.tipoMoneda == b.tipoMoneda && a.denominacion == b.denominacion)
+            if (Dinero.EsSimilar(a, b))
             {
                 cantidad = a.cantidad + b.cantidad;
                 return new Dinero(a.tipoMoneda, a.denominacion, cantidad);
@@ -133,7 +133,7 @@ namespace ATM {
         {
             int cantidad;
 
-            if (a.tipoMoneda == b.tipoMoneda && a.denominacion == b.denominacion && a.cantidad >= b.cantidad)
+            if (Dinero.EsSimilar(a, b) && a.cantidad >= b.cantidad)
             {
                 cantidad = a.cantidad - b.cantidad;
                 return new Dinero(a.tipoMoneda, a.denominacion, cantidad);

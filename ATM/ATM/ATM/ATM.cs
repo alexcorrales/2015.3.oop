@@ -91,5 +91,15 @@ namespace ATM{
             set { conector = value; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Trabajando()
+        {
+            Externo.Tarjeta tarjeta1 = new Externo.Tarjeta("Banco Super", "1234 4567 8901 2345", "Alberto Garcia");
+            //Sesion sesion = new Sesion();
+            
+            //lectora.LeerTarjeta(tarjeta1);
+        }
     }
 }

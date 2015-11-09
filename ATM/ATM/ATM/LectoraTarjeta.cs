@@ -32,10 +32,10 @@ namespace ATM{
          * @param Tarjeta t 
          * @param int Pin
          */
-        public void LeerTarjeta(Externo.Tarjeta t, int Pin) {
+        public void LeerTarjeta(Externo.Tarjeta t, Sesion sesion) {
             this.TarjetaIngresada = true;
-
-            // TODO: Enviar a Sesion los valores de tarjeta y pin
+        
+            sesion.Tarjeta = t;
         }
 
         /**

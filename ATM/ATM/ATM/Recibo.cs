@@ -49,6 +49,8 @@ namespace ATM{
             detalles.Add("Fecha: " + t.Fecha.ToShortDateString());
             detalles.Add("");
             detalles.Add("Tarjeta: " + t.Sesion.Tarjeta.ToStringSecreto());
+
+            // TODO: Funcion incompleta, falta detalles de la transaccion en si
             return detalles;
         }
 

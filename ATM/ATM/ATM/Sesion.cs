@@ -13,14 +13,22 @@ namespace ATM{
 
         public enum EEstadoSesion { INICIADO, TERMINADO }
 
+        public Sesion(ATM atm)
+        {
+            this.Atm = atm;
+        }
+
         /**
          * 
          */
-        public Sesion(Tarjeta tarjeta, string pin) {
-            this.tarjeta = tarjeta;
-            this.pin = pin;
-        }
+        private ATM atm;
 
+        public ATM Atm
+        {
+            get { return atm; }
+            set { atm = value; }
+        }
+        
         /**
          * 
          */
