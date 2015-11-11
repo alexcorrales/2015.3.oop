@@ -19,7 +19,7 @@
         <Label x:Name="label2" Content="Texto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,19,0,0" Grid.Row="1"/>
         <ListBox x:Name="listBox1" Grid.Row="2" ScrollViewer.VerticalScrollBarVisibility="Auto" />
         <Button x:Name="agregarBtn" Content="Agregar" HorizontalAlignment="Left" Margin="306,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Background="#FF17DC29" Click="agregarBtn_Click" Height="26"/>
-        <Button x:Name="eliminarBtn" Content="Eliminar" HorizontalAlignment="Left" Margin="306,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Background="#FFEE3434" Height="26"/>
+        <Button x:Name="eliminarBtn" Content="Eliminar" HorizontalAlignment="Left" Margin="306,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Background="#FFEE3434" Height="26" Click="eliminarBtn_Click"/>
 
     </Grid>
 </Window>

@@ -28,7 +28,7 @@ namespace ListaDeTareas
             tareas = new ListaTareas();    
         }
 
-        public void LlenarListBox()
+        public void ActualizarListBox()
         {
             this.listBox1.Items.Clear();
 
@@ -44,7 +44,15 @@ namespace ListaDeTareas
             Tarea tarea = new Tarea(this.texto1.Text, fecha);
             tareas.AgregarTareas(tarea);
 
-            LlenarListBox();
+            ActualizarListBox();
+        }
+
+        private void eliminarBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Tarea tarea = (Tarea)this.listBox1.SelectedItem;            
+            this.tareas.EliminarTareas(tarea);
+            
+            ActualizarListBox();
         }
     }
 }
