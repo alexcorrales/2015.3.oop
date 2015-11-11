@@ -20,15 +20,31 @@ namespace ListaDeTareas
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ListaTareas tareas;
+
         public MainWindow()
         {
             InitializeComponent();
-            
+            tareas = new ListaTareas();    
+        }
+
+        public void LlenarListBox()
+        {
+            this.listBox1.Items.Clear();
+
+            foreach (Tarea tarea in this.tareas.ToArray())
+            {
+                this.listBox1.Items.Add(tarea);
+            }
         }
 
         private void agregarBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.listBox1.Items.Add(texto1.Text);
+            DateTime fecha = (DateTime) this.fecha1.SelectedDate;
+            Tarea tarea = new Tarea(this.texto1.Text, fecha);
+            tareas.AgregarTareas(tarea);
+
+            LlenarListBox();
         }
     }
 }
